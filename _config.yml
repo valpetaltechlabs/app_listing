@@ -1,0 +1,16 @@
+title: ""
+description: ""
+show_downloads: false
+theme: jekyll-theme-minimal
+
+# Custom settings to remove title
+site:
+  title: ""
+
+# Remove default title behavior
+defaults:
+  - scope:
+      path: ""
+    values:
+      title: ""
+      layout: default

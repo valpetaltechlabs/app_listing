@@ -1,16 +1,16 @@
-title: ""
-description: ""
+title: "FokusTunes"
+description: "6 noise types for focus, sleep & tinnitus relief. Timer included."
 show_downloads: false
 theme: jekyll-theme-minimal
 
 # Custom settings to remove title
 site:
-  title: ""
+  title: "FokusTunes"
 
 # Remove default title behavior
 defaults:
   - scope:
       path: ""
     values:
-      title: ""
+      title: "FokusTunes"
       layout: default

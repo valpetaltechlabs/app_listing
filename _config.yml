@@ -3,6 +3,16 @@ description: "6 noise types for focus, sleep & tinnitus relief. Timer included."
 show_downloads: false
 theme: jekyll-theme-minimal
 
+# Disable GitHub-related features
+github:
+  is_project_page: false
+  is_user_page: false
+  show_downloads: false
+
+# Remove repository information
+repository_url: ""
+repository_name: ""
+
 # Custom settings to remove title
 site:
   title: "FokusTunes"

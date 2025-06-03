@@ -1,46 +1,83 @@
 @import "{{ site.theme }}";
 
-/* Hide the default repository name/title */
+/* Hide ALL GitHub-related elements and branding */
 header h1,
 .view h1,
 #header h1,
 .site-title,
 .project-name,
-.repository-name {
-  display: none !important;
-}
-
-/* Hide any default GitHub Pages branding */
+.repository-name,
 .btn,
 .view .btn,
 .view a.btn,
-a[href*="github.com"] {
+a[href*="github.com"],
+.view p:first-child,
+.view > p,
+.view small,
+footer,
+.footer,
+.project-tagline,
+header p,
+header .view,
+.view,
+small,
+p small,
+header + p,
+body > .wrapper > .view {
   display: none !important;
 }
 
-/* Style the main content */
-.wrapper {
-  width: auto;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+/* Hide any remaining GitHub links and credits */
+a[href*="valpetaltechlabs"],
+a[href*="orderedlist"],
+p:contains("maintained by"),
+p:contains("Hosted on"),
+p:contains("Theme by") {
+  display: none !important;
 }
 
+/* Force hide sidebar/view section entirely */
+.wrapper .view,
+.wrapper > .view,
+aside,
+.sidebar {
+  display: none !important;
+}
+
+/* Make main content take full width */
+.wrapper {
+  width: auto !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+}
+
+.wrapper section {
+  width: 100% !important;
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override any layout constraints */
 section {
-  width: 100%;
-  float: none;
+  width: 100% !important;
+  float: none !important;
+  position: static !important;
 }
 
 /* Improve typography */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
+  background: white;
 }
 
 h1 {
   color: #2c3e50;
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
+  margin-top: 0;
 }
 
 h2 {
@@ -56,9 +93,24 @@ hr {
   margin: 30px 0;
 }
 
+/* Remove any extra spacing or elements */
+.wrapper::before,
+.wrapper::after {
+  display: none !important;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .wrapper {
-    padding: 10px;
+    padding: 10px !important;
   }
+}
+
+/* Additional cleanup - hide any remaining unwanted elements */
+[class*="github"],
+[id*="github"],
+.project-name,
+.tagline,
+.credits {
+  display: none !important;
 }
